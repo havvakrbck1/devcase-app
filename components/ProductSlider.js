@@ -29,12 +29,17 @@ export default function ProductSlider({ products }) {
   }, []);
 
   return (
-    <div ref={sliderRef} className="keen-slider">
-      {products.map((product) => (
-        <div className="keen-slider__slide" key={product.id}>
-          <ProductCard product={product} />
-        </div>
-      ))}
+    <div className="overflow-hidden px-4 md:px-10">
+      <div ref={sliderRef} className="keen-slider">
+        {products.map((product) => (
+          <div
+            className="keen-slider__slide flex justify-center"
+            key={product.id}
+          >
+            <ProductCard product={product} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

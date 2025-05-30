@@ -5,9 +5,12 @@
 @tailwind utilities;
 
 body {
-  @apply bg-white text-gray-800 dark:bg-gray-900 dark:text-white transition-colors duration-300;
+  background-color: white;
+  color: #1f2937; /* text-gray-800 */
+  transition: background-color 0.3s, color 0.3s;
 }
 
-* {
-  scroll-behavior: smooth;
+body.dark {
+  background-color: #111827; /* dark:bg-gray-900 */
+  color: white;
 }
